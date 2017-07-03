@@ -144,13 +144,19 @@ header {
   #main_content {
     flex-direction: column;
   }
+  header {
+    /*flex-wrap: wrap;
+    flex-direction: column;*/
+    /*flex: 1;*/
+  }
 }
 
 @media screen and (min-width: 600px) {
   #main_nav {
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
     flex: 1;
+    /*display: block;*/
   }
   #main_nav a {
     /*flex-wrap: wrap;*/
@@ -159,6 +165,16 @@ header {
   }
   #main_content {
     flex-direction: column;
+      display: block;
+  }
+  header {
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 1;
+  }
+
+  #logo {
+    text-align: center;
   }
 }
 
@@ -170,16 +186,13 @@ header {
     flex-direction: row;
   }
   #main_content {
+
     flex-direction: row;
   }
   #main_content div {
     flex-basis: 30%;
     display: block;
     /*flex-direction: column;*/
+
   }
-  /*header {
-    flex-wrap: wrap;
-    flex-direction: column;
-    flex: 1;
-  }*/
 }
