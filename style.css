@@ -50,11 +50,19 @@ header {
   padding-bottom: 15px;
   margin-bottom: 20px;
   border-bottom: 2px solid #ddddff;
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
+
+/*p {
+  flex-basis: 75%;
+}*/
+
 #logo {
-  position: absolute;
+  flex: 1;
+  /*position: absolute;*/
 }
 
 #site_container {
@@ -71,7 +79,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
+  /*flex-direction: column;*/
 }
 
 #main_nav a {
@@ -95,22 +104,57 @@ header {
   background-color: #DEFFFF;
   padding: 10px;
   display: flex;
-  flex-basis: 50%;
+  flex-direction: row;
+  /*flex-wrap: wrap;*/
+  justify-content: space-around;
+}
 
-
+#main_content>div {
+  flex: 1;
+  /*flex-basis: 66%;*/
 }
 
 #sidebar_content {
-  background-color: #FFFEDC;
-  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#sidebar_content div {
+  padding: 30px;
   margin-top: 15px;
   margin-bottom: 15px;
-  display: flex;
-  justify-content: space-between;
+  background-color: #FFFEDC;
+  flex: 1;
 }
 
 #site_footer {
   background-color: #FEDCAA;
   padding: 10px;
   text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  #main_nav {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    flex: 1;
+  }
+  #main_content {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  #main_nav {
+    flex: 1;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+  }
+
+  #main_content div {
+    flex-basis: 30%;
+    display: block;
+  }
 }
