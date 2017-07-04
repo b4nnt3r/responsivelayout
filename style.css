@@ -50,12 +50,10 @@ header {
   padding-bottom: 15px;
   margin-bottom: 20px;
   border-bottom: 2px solid #ddddff;
-
 }
 
 #logo {
   flex: 1;
-
 }
 
 #site_container {
@@ -72,7 +70,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
 }
 
 #main_nav a {
@@ -96,8 +93,8 @@ header {
   background-color: #DEFFFF;
   padding: 10px;
   display: flex;
-
 }
+
 #sidebar_content {
   display: flex;
   flex-wrap: wrap;
@@ -115,7 +112,8 @@ header {
 #site_footer {
   background-color: #FEDCAA;
   padding: 10px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (min-width: 300px) {
