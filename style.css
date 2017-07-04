@@ -50,19 +50,12 @@ header {
   padding-bottom: 15px;
   margin-bottom: 20px;
   border-bottom: 2px solid #ddddff;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+
 }
-
-
-/*p {
-  flex-basis: 75%;
-}*/
 
 #logo {
   flex: 1;
-  /*position: absolute;*/
+
 }
 
 #site_container {
@@ -79,8 +72,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  /*flex-wrap: wrap;*/
-  /*flex-direction: column;*/
+
 }
 
 #main_nav a {
@@ -104,16 +96,8 @@ header {
   background-color: #DEFFFF;
   padding: 10px;
   display: flex;
-  flex-direction: row;
-  /*flex-wrap: wrap;*/
-  justify-content: space-around;
-}
 
-#main_content>div {
-  flex: 1;
-  /*flex-basis: 66%;*/
 }
-
 #sidebar_content {
   display: flex;
   flex-wrap: wrap;
@@ -139,60 +123,62 @@ header {
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: stretch;
-    flex: 1;
   }
   #main_content {
-    flex-direction: column;
+    display: block;
+  }
+  #logo {
+    text-align: center;
   }
   header {
-    /*flex-wrap: wrap;
-    flex-direction: column;*/
-    /*flex: 1;*/
+    display: flex;
+    flex-direction: column;
   }
 }
 
 @media screen and (min-width: 600px) {
   #main_nav {
     flex-direction: row;
-    /*flex-wrap: wrap;*/
     flex: 1;
-    /*display: block;*/
+    align-items: center;
   }
   #main_nav a {
-    /*flex-wrap: wrap;*/
-    /*flex-direction: column;*/
     flex: 1;
   }
   #main_content {
-    flex-direction: column;
-      display: block;
+    display: block;
   }
+  #main_content>div {}
   header {
+    display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     flex: 1;
   }
-
   #logo {
     text-align: center;
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1000px) {
   #main_nav {
     flex: 1;
     flex-wrap: nowrap;
     align-items: center;
     flex-direction: row;
   }
+  #logo {
+    text-align: left;
+  }
   #main_content {
-
-    flex-direction: row;
+    display: flex;
   }
   #main_content div {
-    flex-basis: 30%;
-    display: block;
-    /*flex-direction: column;*/
-
+    flex: 1;
+  }
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 1;
   }
 }
