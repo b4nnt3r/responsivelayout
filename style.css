@@ -50,10 +50,13 @@ header {
   padding-bottom: 15px;
   margin-bottom: 20px;
   border-bottom: 2px solid #ddddff;
+  display: flex;
+  flex-direction: column;
 }
 
 #logo {
   flex: 1;
+  text-align: center;
 }
 
 #site_container {
@@ -70,6 +73,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 #main_nav a {
@@ -93,6 +99,7 @@ header {
   background-color: #DEFFFF;
   padding: 10px;
   display: flex;
+  display: block;
 }
 
 #sidebar_content {
@@ -115,25 +122,9 @@ header {
   display: flex;
   justify-content: center;
 }
-
-@media screen and (min-width: 300px) {
-  #main_nav {
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-items: stretch;
-  }
-  #main_content {
-    display: block;
-  }
-  #logo {
-    text-align: center;
-  }
-  header {
-    display: flex;
-    flex-direction: column;
-  }
+#site_footer a {
+ padding: 10px;
 }
-
 @media screen and (min-width: 600px) {
   #main_nav {
     flex-direction: row;
@@ -146,7 +137,6 @@ header {
   #main_content {
     display: block;
   }
-  #main_content>div {}
   header {
     display: flex;
     flex-wrap: wrap;
